@@ -76,4 +76,4 @@ import { helloService } from '@local/common/services/hello'
 ## 最佳实践
 
 * 存在common-module或npm源各种包之间互相依赖的情况，其中A依赖C，B依赖C，假如C修复一个bug，则需要去A和B将C的依赖升级一下，比较繁琐。
-* 此时可以通过workspace的方式，将公用的依赖抽离到common中，通过软连接的方式进行引用，修改某依赖以后，全量build发布一下即可。
+* 此时可以通过workspace的方式，将公用的依赖抽离到common中，通过软连接的方式进行引用，修改某依赖以后，全量build发布一下即可。[lerna也适合做这个事](https://zhuanlan.zhihu.com/p/71385053)
